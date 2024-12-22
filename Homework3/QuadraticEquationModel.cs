@@ -204,7 +204,12 @@ namespace Homework3
 
                 A = a;
                 AIsSet = true;
-                _qudraticEquation = $"Квадратное уравнение = '{A} * x^2 + b * x + c = 0'";
+
+                var aValue = AIsSet ? A.ToString() : "a";
+                var bValue = BIsSet ? B.ToString() : "b";
+                var cValue = CIsSet ? C.ToString() : "c";
+
+                _qudraticEquation = $"Квадратное уравнение = '{aValue} * x^2 + {bValue} * x + {cValue} = 0'";
                 Console.WriteLine($"Значение '{nameof(A)}' задано, нажмите Enter для продолжения");
             }
         }
@@ -220,7 +225,12 @@ namespace Homework3
             {
                 B = b;
                 BIsSet = true;
-                _qudraticEquation = $"Квадратное уравнение = '{A} * x^2 + {B} * x + c = 0'";
+
+                var aValue = AIsSet ? A.ToString() : "a";
+                var bValue = BIsSet ? B.ToString() : "b";
+                var cValue = CIsSet ? C.ToString() : "c";
+
+                _qudraticEquation = $"Квадратное уравнение = '{aValue} * x^2 + {bValue} * x + {cValue} = 0'";
                 Console.WriteLine($"Значение '{nameof(B)}' задано, нажмите Enter для продолжения");
             }
         }
@@ -236,7 +246,12 @@ namespace Homework3
             {
                 C = c;
                 CIsSet = true;
-                _qudraticEquation = $"Квадратное уравнение = '{A} * x^2 + {B} * x + {C} = 0'";
+
+                var aValue = AIsSet ? A.ToString() : "a";
+                var bValue = BIsSet ? B.ToString() : "b";
+                var cValue = CIsSet ? C.ToString() : "c";
+
+                _qudraticEquation = $"Квадратное уравнение = '{aValue} * x^2 + {bValue} * x + {cValue} = 0'";
                 Console.WriteLine($"Значение '{nameof(C)}' задано, нажмите Enter для продолжения");
             }
         }
@@ -277,12 +292,12 @@ namespace Homework3
 
             if (_discriminant == 0)
             {
-                return $"x = '{(-B + Math.Sqrt(_discriminant)) / 2 * A}'";
+                return $"x = '{(-B + Math.Sqrt(_discriminant)) / (2 * A)}'";
             }
             else if (_discriminant > 0)
             {
-                double x1 = (-B + Math.Sqrt(_discriminant)) / 2 * A;
-                double x2 = (-B - Math.Sqrt(_discriminant)) / 2 * A;
+                double x1 = (-B + Math.Sqrt(_discriminant)) / (2 * A);
+                double x2 = (-B - Math.Sqrt(_discriminant)) / (2 * A);
                 return $"x1 = '{x1}'\t x2 = '{x2}'";
             }
             else

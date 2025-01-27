@@ -2,7 +2,14 @@
 {
     internal class Quadcopter : IFlyingRobot, IChargeable
     {
-        private List<string> _components = new List<string> { "rotor1", "rotor2", "rotor3", "rotor4" };
+        private List<string> _components = new()
+        { 
+            "rotor1",
+            "rotor2",
+            "rotor3",
+            "rotor4"
+        };
+
         public void Charge()
         {
             Console.WriteLine("Charging...");
@@ -17,7 +24,7 @@
 
         public string GetInfo()
         {
-            throw new NotImplementedException();
+            return "I am a flying and chargeable robot.";
         }
     }
 }

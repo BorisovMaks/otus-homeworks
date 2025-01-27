@@ -1,10 +1,7 @@
 ﻿namespace Homework5
 {
-    internal interface IFlyingRobot
+    internal interface IFlyingRobot : IRobot
     {
-        public string GetRobotType()
-        {
-            return "I am a flying robot.";
-        }
+        public new string GetRobotType() => "I am a flying robot.";
     }
 }

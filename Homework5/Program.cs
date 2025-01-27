@@ -6,6 +6,6 @@
         {
             var quad = new Quadcopter();
             quad.Charge();
-        }
+        }       
     }
 }

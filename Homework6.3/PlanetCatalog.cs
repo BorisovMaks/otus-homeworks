@@ -33,7 +33,7 @@
                 }
             }
 
-            return (planetName, 0, 0d, null);
+            return (planetName, 0, 0d, "Планета в коллекции не найдена");
         }
     }
 }

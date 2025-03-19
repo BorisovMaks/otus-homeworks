@@ -13,7 +13,17 @@
             PrintMessage(planetCatalog.GetPlanet("Mars", ValidatePlanet));
             PrintMessage(planetCatalog.GetPlanet("Venus", ValidatePlanet));
 
-            PrintMessage(planetCatalog.GetPlanet("Earth", CheckPlanetName));
+            PrintMessage(planetCatalog.GetPlanet("Earth", (name) => 
+            {
+                if (name == "Limonia")
+                {
+                    return "Это запретная планета";
+                }
+                else
+                {
+                    return null;
+                }
+            }));
             PrintMessage(planetCatalog.GetPlanet("Limonia", CheckPlanetName));
             PrintMessage(planetCatalog.GetPlanet("Mars", CheckPlanetName));
             PrintMessage(planetCatalog.GetPlanet("Venus", CheckPlanetName));

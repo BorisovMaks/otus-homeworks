@@ -33,13 +33,14 @@ namespace Homework6._1
                 Name = "Venus",
                 OrderNumber = 2,
                 EquatorLength = 38025,
-                PreviousPlanet = mars,
+                PreviousPlanet = v,
             };
 
             PrintPlanet(venus, venus);
             PrintPlanet(earth, venus);
             PrintPlanet(mars, venus);
             PrintPlanet(venus2, venus);
+
         }
 
         /// <summary>
